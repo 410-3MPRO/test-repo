@@ -1,0 +1,84 @@
+ //Cho số tự nhiên n nhập từ bàn phím, hãy viết chương trình in ra tổng của n số tự nhiên đầu tiên sử dụng vòng lặp.
+        static int TinhTong(int  n)
+        {
+            int S = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                S += i;
+            }
+            return S;
+        }
+        //Nhập vào số tiền gửi ban đầu, tiền lãi mỗi năm và số năm gửi tiền hãy tính số tiền nhận được sau n năm(biết lãi tính theo hình thức lãi kép).
+        
+        static double TinhLai(double TBanDau, double Lai, int n)
+        {
+            return TBanDau * Math.Pow((1 + Lai), n);
+        }
+
+        //Nhập vào một số tự nhiên n, in ra màn hình tam giác cân rỗng có chiều cao là n được tạo thành từ những dấu *, có sử dụng vòng lặp.
+        
+        static void InTG(int n)
+        {
+            int q = 0, a = n - 2;
+            // in hàng đầu tiên
+            for (int c = 1; c < n; c++)
+            {
+                Console.Write(" ");
+            }               
+            Console.WriteLine("*");
+            // in các hàng ở giữa
+
+            while (a >0)
+            {
+                for (int i = 0; i < a; i++)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write("*");
+
+                for (int k = 0; k <= q; k++)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write("*");
+                a--;
+                q += 2;
+                Console.Write("\n");
+            }
+            // in hàng cuối cùng
+            for (int b = 2*n-1; b > 0; b--)
+            {
+                Console.Write("*");
+            }
+
+        }
+
+
+
+
+
+
+trong main :
+
+
+//Console.WriteLine("In ra tong cua n so tu nhien dau tien !!!  ");
+            //Console.WriteLine("Nhap Gia Tri cua so n :  ");
+            //int so = int.Parse(Console.ReadLine());
+            //Console.Write("Tong Gia Tri cua {0} so tu nhien dau tien la : {1} ",so,TinhTong(so));
+            //Console.WriteLine("\n--------------------------------------------------------------");
+
+            //Console.WriteLine("Tinh Lai Kep !!!");
+            //Console.WriteLine("Nhap So Tien Muon Goi : ");
+            //double tbd = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Nhap Phan Tram Lai : ");
+            //double l = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Nhap So Nam Muon Goi : ");
+            //int n = int.Parse(Console.ReadLine());
+
+            //Console.Write("So Tien Ban Nhan Duoc Sau {0} Nam La : {1}", n, Math.Round(TinhLai(tbd, l, n), 3));
+
+
+            //Console.WriteLine("In ra hinh tam giac !!!  ");
+            //Console.WriteLine("Nhap chieu cao cua tam giac :  ");
+            //int cc = int.Parse(Console.ReadLine());
+            //InTG(cc)
